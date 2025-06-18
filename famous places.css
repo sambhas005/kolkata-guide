@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #321e49, #301e4a);
+  color: #333;
+}
+
+/* Nav Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 15px 30px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #00d4ff;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* About */
+#about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #a383dc;
+}
+
+#about h2 {
+  font-size: 2em;
+  color: #0e4daa;
+  margin-bottom: 15px;
+}
+
+/* Places */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.card {
+  width: 250px; /* ⬅️ Smaller size */
+  height: 250px;
+  margin: 15px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  border-radius: 15px;
+}
+
+.card * {
+  position: relative;
+  z-index: 1;
+  padding: 0 15px;
+}
+
+.card h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #00e5ff;
+}
+
+.card .description {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.card .address {
+  font-size: 0.85em;
+  margin: 5px 0;
+}
+
+.map-link {
+  margin-top: 8px;
+  display: inline-block;
+  background: #2575fc;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: background 0.3s ease;
+}
+
+.map-link:hover {
+  background: #1a5ed2;
+}
+
+/* Sign Up */
+#signup {
+  background-color: #301e4a;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#signup h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2575fc;
+}
+
+#signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#signup input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#signup button {
+  padding: 10px 20px;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#signup button:hover {
+  background-color: #1a5ed2;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95em;
+  width: 100%;
+}
